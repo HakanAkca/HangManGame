@@ -14,6 +14,7 @@
 		CAB3848F21A4429B00B04393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848D21A4429B00B04393 /* LaunchScreen.storyboard */; };
 		CAB3849A21A4429C00B04393 /* HangmanGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3849921A4429C00B04393 /* HangmanGameTests.swift */; };
 		CAB384A521A4429C00B04393 /* HangmanGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB384A421A4429C00B04393 /* HangmanGameUITests.swift */; };
+		CAB384B521A44AF800B04393 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB384B421A44AF800B04393 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CAB384A021A4429C00B04393 /* HangmanGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HangmanGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB384A421A4429C00B04393 /* HangmanGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGameUITests.swift; sourceTree = "<group>"; };
 		CAB384A621A4429C00B04393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB384B421A44AF800B04393 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				CAB3848421A4429700B04393 /* AppDelegate.swift */,
 				CAB3848621A4429700B04393 /* ViewController.swift */,
+				CAB384B421A44AF800B04393 /* GameController.swift */,
 				CAB3848821A4429700B04393 /* Main.storyboard */,
 				CAB3848B21A4429B00B04393 /* Assets.xcassets */,
 				CAB3848D21A4429B00B04393 /* LaunchScreen.storyboard */,
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB3848721A4429700B04393 /* ViewController.swift in Sources */,
+				CAB384B521A44AF800B04393 /* GameController.swift in Sources */,
 				CAB3848521A4429700B04393 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
