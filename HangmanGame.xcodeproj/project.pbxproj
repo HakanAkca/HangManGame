@@ -15,8 +15,7 @@
 		CAB3849A21A4429C00B04393 /* HangmanGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3849921A4429C00B04393 /* HangmanGameTests.swift */; };
 		CAB384A521A4429C00B04393 /* HangmanGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB384A421A4429C00B04393 /* HangmanGameUITests.swift */; };
 		CAB384B521A44AF800B04393 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB384B421A44AF800B04393 /* GameController.swift */; };
-		DAFB888521A459E3007E50AC /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = DAFB888421A459E2007E50AC /* background.png */; };
-		DAFB888721A45DEA007E50AC /* handman-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = DAFB888621A45DEA007E50AC /* handman-logo.png */; };
+		CAB384B721A458AC00B04393 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB384B621A458AC00B04393 /* FormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +50,7 @@
 		CAB384A421A4429C00B04393 /* HangmanGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanGameUITests.swift; sourceTree = "<group>"; };
 		CAB384A621A4429C00B04393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB384B421A44AF800B04393 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		DAFB888421A459E2007E50AC /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../background.png; sourceTree = "<group>"; };
-		DAFB888621A45DEA007E50AC /* handman-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "handman-logo.png"; path = "../../handman-logo.png"; sourceTree = "<group>"; };
+		CAB384B621A458AC00B04393 /* FormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +101,10 @@
 		CAB3848321A4429700B04393 /* HangmanGame */ = {
 			isa = PBXGroup;
 			children = (
-				DAFB888421A459E2007E50AC /* background.png */,
-				DAFB888621A45DEA007E50AC /* handman-logo.png */,
 				CAB3848421A4429700B04393 /* AppDelegate.swift */,
 				CAB3848621A4429700B04393 /* ViewController.swift */,
 				CAB384B421A44AF800B04393 /* GameController.swift */,
+				CAB384B621A458AC00B04393 /* FormController.swift */,
 				CAB3848821A4429700B04393 /* Main.storyboard */,
 				CAB3848B21A4429B00B04393 /* Assets.xcassets */,
 				CAB3848D21A4429B00B04393 /* LaunchScreen.storyboard */,
@@ -239,8 +236,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB3848F21A4429B00B04393 /* LaunchScreen.storyboard in Resources */,
-				DAFB888521A459E3007E50AC /* background.png in Resources */,
-				DAFB888721A45DEA007E50AC /* handman-logo.png in Resources */,
 				CAB3848C21A4429B00B04393 /* Assets.xcassets in Resources */,
 				CAB3848A21A4429700B04393 /* Main.storyboard in Resources */,
 			);
@@ -270,6 +265,7 @@
 				CAB3848721A4429700B04393 /* ViewController.swift in Sources */,
 				CAB384B521A44AF800B04393 /* GameController.swift in Sources */,
 				CAB3848521A4429700B04393 /* AppDelegate.swift in Sources */,
+				CAB384B721A458AC00B04393 /* FormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
