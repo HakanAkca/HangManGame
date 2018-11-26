@@ -54,20 +54,19 @@ class GameController: UIViewController {
     @IBAction func btnLetters(_ sender: AnyObject) {
         let characters = Array(word.uppercased())
         let letters = dataButton[sender.tag!]
-        var contain = false
+        var contain = true
         for x in 0...(characters.count - 1){
             if(String(characters[x]) == letters){
                 contain = true
                 textGame.text = String(characters[x])
+                break;
             }else{
                 contain = false
             }
         }
         if(!contain){
-            print("tu as tord")
             i = i+1
-            
-            if(i == 10){
+            if(i == 11){
                 toLoose()
             }
         }
