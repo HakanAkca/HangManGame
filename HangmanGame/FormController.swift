@@ -20,7 +20,7 @@ class FormController: UIViewController {
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
-        let postString = "email=sahra.vadrot@supinternet.fr&password=SUP00000"
+        let postString = "email=\(email.text!)&password=\(pw.text!)"
         request.httpBody = postString.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {                                                 // check for fundamental networking error
