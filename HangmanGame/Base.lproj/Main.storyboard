@@ -334,7 +334,7 @@
                                     <action selector="btnLetters:" destination="Mnj-1K-pLs" eventType="touchUpInside" id="WAy-UM-JVf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="endText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fBT-MA-ri0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fBT-MA-ri0">
                                 <rect key="frame" x="67" y="178" width="240" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

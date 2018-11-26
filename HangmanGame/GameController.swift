@@ -9,7 +9,9 @@
 import UIKit
 
 class GameController: UIViewController {
-    
+    var guessedLetters: [String] = []
+    var incorrectGuesses = 0
+    var correctGuesses = 0
     var dataButton = [
         1: "A",
         2: "B",
@@ -54,11 +56,15 @@ class GameController: UIViewController {
     @IBAction func btnLetters(_ sender: AnyObject) {
         let characters = Array(word.uppercased())
         let letters = dataButton[sender.tag!]
+        var disableButton = sender as? UIButton
+        guessedLetters.append(letters!)
+        updateWordInput()
         var contain = true
+        disableButton?.isEnabled = false
+        disableButton?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
         for x in 0...(characters.count - 1){
             if(String(characters[x]) == letters){
                 contain = true
-                textGame.text = String(characters[x])
                 break;
             }else{
                 contain = false
@@ -69,6 +75,25 @@ class GameController: UIViewController {
             if(i == 11){
                 toLoose()
             }
+        }
+    }
+    
+    func updateWordInput(){
+        var input = ""
+        var letters = Array(word.uppercased())
+        var underscore = 0
+        for x in 0...(letters.count - 1){
+            if(guessedLetters.contains(String(letters[x]))) {
+                input += String(letters[x]) + " "
+            } else {
+                input += "_ "
+                underscore = underscore + 1
+            }
+        }
+        print(input)
+        textGame.text = input
+        if(underscore == 0){
+            toWin()
         }
     }
     
@@ -84,6 +109,7 @@ class GameController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateWordInput()
     }
 
     override func didReceiveMemoryWarning() {
