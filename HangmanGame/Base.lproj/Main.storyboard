@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="coucou" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-E8-EcR">
-                                <rect key="frame" x="67" y="31" width="240" height="78"/>
+                                <rect key="frame" x="67" y="31" width="240" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -334,26 +334,29 @@
                                     <action selector="btnLetters:" destination="Mnj-1K-pLs" eventType="touchUpInside" id="WAy-UM-JVf"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="coucou" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PiW-YA-GtX">
-                                <rect key="frame" x="61" y="232" width="240" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="endText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fBT-MA-ri0">
-                                <rect key="frame" x="67" y="84" width="240" height="128"/>
+                                <rect key="frame" x="67" y="178" width="240" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6c-dy-yqg">
+                                <rect key="frame" x="118" y="595" width="139" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="retour a l'autre page"/>
+                                <connections>
+                                    <action selector="endGameBtn:" destination="Mnj-1K-pLs" eventType="touchUpInside" id="VLH-1G-pxY"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backToView" id="IP0-iK-UR4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <accessibility key="accessibilityConfiguration" identifier="GameModal"/>
                         <viewLayoutGuide key="safeArea" id="WMu-y7-N9u"/>
                     </view>
                     <connections>
+                        <outlet property="endGameButton" destination="d6c-dy-yqg" id="aXA-gD-skN"/>
                         <outlet property="endText" destination="fBT-MA-ri0" id="eey-zn-UF1"/>
                         <outlet property="textGame" destination="eCS-E8-EcR" id="DtM-Zd-hJz"/>
                     </connections>
@@ -363,4 +366,7 @@
             <point key="canvasLocation" x="653.60000000000002" y="130.88455772113943"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="IP0-iK-UR4"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 import UIKit
 
 class GameController: UIViewController {
+    
     var dataButton = [
         1: "A",
         2: "B",
@@ -36,13 +37,20 @@ class GameController: UIViewController {
         24: "X",
         25: "Y",
         26: "Z"
-        
     ]
-    var word: String!
-
     
+    var word: String!
+    var i = 0
+
+    @IBOutlet weak var endGameButton: UIButton!
     @IBOutlet weak var endText: UITextView!
+    
     @IBOutlet weak var textGame: UITextView!
+    
+    @IBAction func endGameBtn(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "backToView", sender: nil)
+    }
+    
     @IBAction func btnLetters(_ sender: AnyObject) {
         let characters = Array(word.uppercased())
         let letters = dataButton[sender.tag!]
@@ -50,29 +58,37 @@ class GameController: UIViewController {
         for x in 0...(characters.count - 1){
             if(String(characters[x]) == letters){
                 contain = true
-                break;
+                textGame.text = String(characters[x])
+            }else{
+                contain = false
             }
         }
         if(!contain){
             print("tu as tord")
-            toLoose()
+            i = i+1
+            
+            if(i == 10){
+                toLoose()
+            }
         }
     }
+    
     func toLoose(){
         endText.text="You suck, le texte était \"\(word!)\"."
+        self.endGameButton.isHidden = false
     }
+    
     func toWin(){
         endText.text = "You win"
+        self.endGameButton.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textGame.text = word
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
