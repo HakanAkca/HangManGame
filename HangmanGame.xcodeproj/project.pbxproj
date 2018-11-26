@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CAB3848521A4429700B04393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3848421A4429700B04393 /* AppDelegate.swift */; };
 		CAB3848721A4429700B04393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3848621A4429700B04393 /* ViewController.swift */; };
-		CAB3848A21A4429700B04393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848821A4429700B04393 /* Main.storyboard */; };
+		CAB3848A21A4429700B04393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848821A4429700B04393 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		CAB3848C21A4429B00B04393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848B21A4429B00B04393 /* Assets.xcassets */; };
 		CAB3848F21A4429B00B04393 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848D21A4429B00B04393 /* LaunchScreen.storyboard */; };
 		CAB3849A21A4429C00B04393 /* HangmanGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3849921A4429C00B04393 /* HangmanGameTests.swift */; };
@@ -193,6 +193,9 @@
 		CAB3847921A4429700B04393 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "SUP'Internet 08";

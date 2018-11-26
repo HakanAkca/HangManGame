@@ -37,7 +37,11 @@ class FormController: UIViewController {
                 //here dataResponse received from a network request
                 let jsonResponse = try JSONSerialization.jsonObject(with:
                     data, options: [])
-                print(jsonResponse) //Response result
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "loagedIdentif", sender: nil)
+                }
+                
+
             } catch let parsingError {
                 print("Error", parsingError)
             }
