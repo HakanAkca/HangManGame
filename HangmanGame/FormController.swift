@@ -12,6 +12,7 @@ class FormController: UIViewController {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var pw: UITextField!
     
+    @IBOutlet weak var btnValidate: UIButton!
     
     @IBAction func btnForm(_ sender: Any) {
         // POST
@@ -73,22 +74,35 @@ class FormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.borderStyle = .none
+        email.layer.backgroundColor = UIColor.white.cgColor
+        
+        email.layer.masksToBounds = false
+        email.layer.shadowColor = UIColor.gray.cgColor
+        //        email.layer.shadowColor = UIColor(red: 96, green: 0, blue: 46, alpha: 1).cgColor
+        email.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        email.layer.shadowOpacity = 1.0
+        email.layer.shadowRadius = 0.0
+        
+        pw.borderStyle = .none
+        pw.layer.backgroundColor = UIColor.white.cgColor
+        
+        pw.layer.masksToBounds = false
+        pw.layer.shadowColor = UIColor.gray.cgColor
+        pw.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        pw.layer.shadowOpacity = 1.0
+        pw.layer.shadowRadius = 0.0
+
+        //btnValidate.backgroundColor = .clear
+        //btnValidate.layer.cornerRadius = 0
+        //btnValidate.layer.borderWidth = 1
+        //btnValidate.layer.borderColor = UIColor(red: 244, green: 0, blue: 118, alpha: 0.5).cgColor
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

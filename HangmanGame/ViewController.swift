@@ -26,7 +26,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textDataWord.borderStyle = .none
+        textDataWord.layer.backgroundColor = UIColor.white.cgColor
+        
+        textDataWord.layer.masksToBounds = false
+        textDataWord.layer.shadowColor = UIColor.gray.cgColor
+        textDataWord.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        textDataWord.layer.shadowOpacity = 1.0
+        textDataWord.layer.shadowRadius = 0.0
     }
 
     override func didReceiveMemoryWarning() {
