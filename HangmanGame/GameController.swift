@@ -47,6 +47,7 @@ class GameController: UIViewController {
     @IBOutlet weak var endGameButton: UIButton!
     @IBOutlet weak var endText: UITextView!
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var textGame: UITextView!
     
     @IBAction func endGameBtn(_ sender: UIButton) {
@@ -56,12 +57,13 @@ class GameController: UIViewController {
     @IBAction func btnLetters(_ sender: AnyObject) {
         let characters = Array(word.uppercased())
         let letters = dataButton[sender.tag!]
-        var disableButton = sender as? UIButton
+        let disableButton = sender as? UIButton
         guessedLetters.append(letters!)
         updateWordInput()
         var contain = true
         disableButton?.isEnabled = false
         disableButton?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0)
+        disableButton?.setTitleColor(UIColor.gray, for: UIControlState.normal)
         for x in 0...(characters.count - 1){
             if(String(characters[x]) == letters){
                 contain = true
@@ -75,6 +77,7 @@ class GameController: UIViewController {
             if(i == 11){
                 toLoose()
             }
+            //image.image = UIImage(named:"(String(i)).png")
         }
     }
     
