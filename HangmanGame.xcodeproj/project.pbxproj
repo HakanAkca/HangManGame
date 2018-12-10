@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A3F364B21BEAB2A0013700F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3F364A21BEAB2A0013700F /* TableViewController.swift */; };
 		CAB3848521A4429700B04393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3848421A4429700B04393 /* AppDelegate.swift */; };
 		CAB3848721A4429700B04393 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB3848621A4429700B04393 /* ViewController.swift */; };
 		CAB3848A21A4429700B04393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB3848821A4429700B04393 /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A3F364A21BEAB2A0013700F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		CAB3848121A4429700B04393 /* HangmanGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HangmanGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB3848421A4429700B04393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB3848621A4429700B04393 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				CAB3848B21A4429B00B04393 /* Assets.xcassets */,
 				CAB3848D21A4429B00B04393 /* LaunchScreen.storyboard */,
 				CAB3849021A4429B00B04393 /* Info.plist */,
+				4A3F364A21BEAB2A0013700F /* TableViewController.swift */,
 			);
 			path = HangmanGame;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				CAB3848721A4429700B04393 /* ViewController.swift in Sources */,
 				CAB384B521A44AF800B04393 /* GameController.swift in Sources */,
 				CAB3848521A4429700B04393 /* AppDelegate.swift in Sources */,
+				4A3F364B21BEAB2A0013700F /* TableViewController.swift in Sources */,
 				CAB384B721A458AC00B04393 /* FormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,9 +12,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var textDataWord: UITextField!
     
     @IBAction func btnDataWord(_ sender: Any) {
-        let word = ""
-        self.performSegue(withIdentifier: "GameModal", sender: word)
+        let word = textDataWord.text
+        if !(word?.isEmpty)!{
+         self.performSegue(withIdentifier: "GameModal", sender: word)
+        }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if(segue.identifier == "GameModal"){

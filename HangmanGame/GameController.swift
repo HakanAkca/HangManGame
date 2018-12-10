@@ -77,7 +77,8 @@ class GameController: UIViewController {
             if(i == 11){
                 toLoose()
             }
-            //image.image = UIImage(named:"(String(i)).png")
+            print( (String(i)) )
+            image.image = UIImage(named: (String(i)) + ".png" )
         }
     }
     
@@ -101,12 +102,12 @@ class GameController: UIViewController {
     }
     
     func toLoose(){
-        endText.text="You suck, le texte était \"\(word!)\"."
+        endText.text="Perdu! Le texte était \"\(word!)\"."
         self.endGameButton.isHidden = false
     }
     
     func toWin(){
-        endText.text = "You win"
+        endText.text = "Bien joué ;)"
         self.endGameButton.isHidden = false
     }
     
