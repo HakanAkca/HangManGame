@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         textDataWord.borderStyle = .none
         textDataWord.layer.backgroundColor = UIColor.white.cgColor
         
@@ -37,6 +39,10 @@ class ViewController: UIViewController {
         textDataWord.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         textDataWord.layer.shadowOpacity = 1.0
         textDataWord.layer.shadowRadius = 0.0
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {

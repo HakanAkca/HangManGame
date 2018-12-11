@@ -54,16 +54,15 @@ class FormController: UIViewController {
                             print("statusCode should be 200, but is \(httpStatus.statusCode)")
                             print(response)
                         }else{
-                            print(response)
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "loagedIdentif", sender: nil)
+                            }
+
                         }
                     }
                     task_get.resume()
                     
-}
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "loagedIdentif", sender: nil)
-                }
-                
+}                
                 
             } catch let parsingError {
                 print("Error", parsingError)
@@ -74,6 +73,8 @@ class FormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FormController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         email.borderStyle = .none
         email.layer.backgroundColor = UIColor.white.cgColor
         
@@ -97,6 +98,10 @@ class FormController: UIViewController {
         //btnValidate.layer.cornerRadius = 0
         //btnValidate.layer.borderWidth = 1
         //btnValidate.layer.borderColor = UIColor(red: 244, green: 0, blue: 118, alpha: 0.5).cgColor
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
